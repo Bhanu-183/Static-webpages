@@ -1,0 +1,445 @@
+* { 
+    margin:0; 
+    padding:0; 
+    box-sizing:border-box; 
+    font-family:'Alata';
+}
+
+.header
+{
+    height: 650px;
+    background-attachment: fixed;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: linear-gradient(to right, rgba(8, 8, 8, 0.7), rgba(87, 6, 76, 0.5)),url(./images/desktop/image-hero.jpg);
+}
+
+.title
+{
+    font-family:'Alata';
+    font-size:50px;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 200px;
+    color: white;
+}
+
+.opt-mob
+{
+    color: white;
+    display: none;
+}
+.navbar
+{
+    color: white;
+    display: inline;
+    float: right;
+    margin-right: 120px;
+    margin-top: 100px;
+}
+
+.navbar a
+{
+    color:white;
+    text-decoration: none;
+    padding: 20px;
+   
+}
+
+.navbar a:active
+{
+    text-decoration: underline;
+}
+
+.text
+{
+    padding: 30px;
+    position: absolute;
+    font-family:'Josefin Sans';
+    width: 550px;
+    color: white;
+    font-size: 60px;
+    border: solid white;
+    margin-left: 200px;
+    margin-top: 300px;
+}
+
+.interactive
+{
+  margin-top: 100px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.phone
+{
+  display: none;
+  width: 100px;
+  height: 100px;
+}
+
+.interactive img
+{
+  width: 700px;
+
+}
+
+.interactive-text
+{
+  font-family:'Josefin Sans';
+  position:absolute;
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  padding: 75px;
+  margin-top: -280px;
+  margin-left: 730px;
+  background-color: white;
+  font-weight: 30px;
+  font-weight: lighter;
+}
+
+.interactive-text h1
+{
+  font-family:'Josefin Sans';
+}
+
+.interactive-text p
+{
+  color: hsl(0, 0%, 41%);
+}
+
+.creations
+{
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 200px;
+}
+
+.creations h1
+{
+  font-family:'Josefin Sans';
+}
+
+.see 
+{
+  position: relative;
+  margin-left: 100;
+  float: right;
+  border: solid hsl(0, 0%, 41%) 2px;
+  background-color:white;
+  color:black;
+  padding: 15px 30px 15px 30px;
+  cursor: pointer;
+  margin-top: 150px;
+  font-family:'Josefin Sans';
+  margin-right: 100px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.see:hover
+{
+  border: none;
+  background-color: black;
+  color: white;
+  transition:all 0.8s;
+}
+
+.mob 
+{
+  display: none;
+}
+.close:hover
+{
+  float: right;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  margin-top: 200px;
+}
+
+.mobi
+{
+  display: none;
+}
+
+.column {
+  flex:25%;
+  cursor: pointer;
+}
+
+.column img {
+  margin-top: 60px;
+}
+
+.column img:hover
+{
+  opacity: 0.5;
+  border-radius: 10px;
+  color: black;
+  transform: scale(1.08);
+  transition: all 0.5s;
+}
+
+.subs
+{
+  font-family:'Josefin Sans';
+  position: absolute;
+  margin-top: -110px;
+  margin-left: 40px;
+  color:white;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.footer
+{
+  margin-top: 100px;
+  color: white;
+  height: 170px;
+  width: 100%;
+  top: 0;
+  background-color: black;
+}
+
+.footer h1
+{
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 70px;
+}
+
+.footer img
+{
+  float: right;
+  margin-top: 70px;
+  padding: 1px;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.footer p
+{
+  float:right; 
+  margin-top:120px;
+  margin-right:-280px;
+  color: hsl(0, 0%, 41%);
+}
+
+@media only screen and (max-width:600px)
+{
+    .header
+    {
+        height: 800px;
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.7), rgba(87, 6, 76, 0.5)),url(./images/mobile/image-hero.jpg);
+        background-attachment: fixed;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }
+
+    .title
+    {
+        font-size:40px;
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+
+    .text
+    {
+        margin-left: 50px;
+        width: 280px;
+        font-size: xx-large;
+    }
+
+    .navbar
+    {
+        display: none;
+    }
+
+    .opt-mob
+    {
+        display: block;
+        float: right;
+        margin-top: 60px;
+        margin-right: 20px;
+    }
+    .modal
+    {
+        display: none; 
+        position: fixed;
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 380px; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,1); 
+      }
+      
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 50%;
+        max-width: 700px;
+        margin-top: 100px;
+        text-align: center;
+      }
+      
+      .modal-content{  
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+
+      .modal-content a
+      {
+        text-decoration: none;
+        display: block;
+        color: white;
+        padding: 15px;
+      }
+      
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)} 
+        to {-webkit-transform:scale(1)}
+      }
+      
+      @keyframes zoom {
+        from {transform:scale(0)} 
+        to {transform:scale(1)}
+      }
+
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight:lighter;
+        transition: 0.3s;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .interactive
+      {
+        display: none;
+      }      
+
+      .phone{
+        display: block;
+      }
+
+      .phone img
+      {
+        margin-top: 100px;
+        position: relative;
+        display: block;
+        margin-left: 30px;
+        width: 320px;
+        height: 280px;
+      }
+
+
+      .interactive-text
+      {
+        margin-top: 250px;
+        margin-left:40px;
+        text-align: left;
+        width: 300px;
+        font-size: small;
+        padding: 30px;
+      }
+
+      .see
+      {
+        display: none;
+      }
+
+      .mob
+      {
+        display: block;
+        position: relative;
+        text-align: center;
+        margin-left:70;
+        margin-top: 50px;
+        padding: 18px 80px 18px 80px;
+      }
+
+      .row
+      {
+        display: none;
+      }
+
+      .mobi
+      {
+        display: block;
+        margin-left: 0;
+        margin-top: 50px;
+      }
+      
+      .creations
+      {
+        position: relative;
+        margin-top: 580px;
+        width: 100%;
+        text-align: center;
+        margin-left: 10px;
+      }
+      .row
+      {
+        margin-top: -15px;
+      }
+
+      .column img
+      {
+        margin-left: 20px;
+        margin-right: 50px;
+        width:330px;
+      }
+
+      .subs
+      {
+        margin-top: -80px;
+      }
+
+      .footer
+      {
+        margin-top: 220px;
+        height: 180px;
+      }
+
+      .footer h1
+      {
+        margin-top: 25px;
+        margin-left: 100px;
+      }
+
+      .footer img 
+      {
+        margin-top: 100px;
+        display: block;
+      }
+
+      .footer p
+      {
+        margin-top: 140px;
+        margin-left: 50px;
+        float: left;
+      }
+}

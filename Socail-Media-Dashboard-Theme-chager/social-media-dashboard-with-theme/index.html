@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Social media dashboard with theme switcher</title>
+  <script src="javascript.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+
+<body id="body" style="background-color: black;">
+  <p style="color: whitesmoke;">Developed by: Bhanu Krishna Prasad.V</p> 
+        <div id="div1" class="top">
+
+              <div style="margin-left: 100px;" class="header">
+                    <h1 style="margin-bottom: 0;" class="header-text">Social Media Dashboard</h1>
+                    <p class="follow">Total Followers:23,004</p>
+              </div>
+              
+              <div class="toggle">
+                    <label for="toggle" class="label" style="font-weight: bolder;position:absolute;margin-top: 9px;margin-left:-80px;">Dark Mode</label>
+                    <label class="switch">
+                    <input type="checkbox" id="toggle" onchange="check()" value="off">
+                    <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="cards">
+                <div id="fb" class="card" onclick="display()">
+                    <img class="fb-icon" src="./images/icon-facebook.svg">
+                    <p class="fb-text" id="fb-text">@bhanu</p><br>
+                    <div class="numbers">1987 
+                        <p class="category"> F O L L O W E R S</p>
+                    </div>
+                    <img src="./images/icon-up.svg" class="up">
+                    <p class="today">12 Today</p>
+                </div>
+    
+                <div id="tw" class="card" onclick="display()">
+                    <img class="tw-icon" src="./images/icon-twitter.svg">
+                    <p class="tw-text" id="tw-text">@bhanu</p><br>
+                    <div class="numbers">1044
+                      <p class="category">F O L L O W E R S</p>
+                    </div>
+                    <img src="./images/icon-up.svg" class="up">
+                    <p class="today">99 Today</p>
+                </div>  
+
+                <div id="insta" class="card" onclick="display()">
+                    <img class="insta-icon" src="./images/icon-instagram.svg">
+                    <p class="insta-text" id="insta-text">@bhanu_vipparla</p><br>
+                    <div class="numbers">11k<p class="category">F O L L O W E R S</p></div>
+                    <img src="./images/icon-up.svg" class="up">
+                    <p class="today">1099 Today</p>
+                </div>
+
+                <div id="yt" class="card" onclick="display()">
+                    <img class="yt-icon" src="./images/icon-youtube.svg">
+                    <p class="yt-text" id="yt-text">Bhanu V.</p><br>
+                    <div class="numbers">8239<p class="category">S U B S C R I B E R S</p></div>
+                    <img src="./images/icon-up.svg" class="up">
+                    <p class="today">144 Today</p>
+                </div>
+                
+
+          <div style="position: absolute;; margin-top: 255px; margin-left: 100px;">
+            <h2 class="darkmode">Overview - Today</h2>
+          </div>
+
+        <div id="fb-views" class="card" onclick="display()">
+            <p class="fb-text-likes" id="fb-text-views">Page Views</p><br>
+            <img class="fb-icon-views" src="./images/icon-facebook.svg">
+            <div class="fb-viewsnumbers">87 </div>
+            <img src="./images/icon-up.svg" class="up-overview">
+            <p class="percentage-up">3%</p>
+        </div>
+
+        <div id="fb-likes" class="card" onclick="display()">
+          <p class="fb-text-likes" id="fb-text-likes">Likes</p><br>
+          <img class="fb-icon-views" src="./images/icon-facebook.svg">
+          <div class="fb-likesnumbers">52</div>
+          <img src="./images/icon-down.svg" class="down">
+          <p class="percentage-down">2%</p>
+        </div>
+
+        <div id="insta-likes" class="card" onclick="display()">
+          <p class="fb-text-likes" id="insta-text-likes">Likes</p><br>
+          <img class="fb-icon-views" src="./images/icon-instagram.svg">
+          <div class="insta-likesnumbers">5462</div>
+          <img src="./images/icon-up.svg" class="up-overview">
+          <p class="percentage-up">2257%</p>
+        </div>
+
+        <div id="insta-views" class="card" onclick="display()">
+          <p class="fb-text-likes" id="insta-text-views">Profile Views</p><br>
+          <img class="fb-icon-views" src="./images/icon-instagram.svg">
+          <div class="insta-viewsnumbers">52k</div>
+          <img src="./images/icon-up.svg" class="up-overview">
+          <p class="percentage-up">1375%</p>
+        </div>
+
+        <div id="tw-views" class="card" onclick="display()">
+          <p class="fb-text-likes" id="tw-text-views">Retweets</p><br>
+          <img class="fb-icon-views" src="./images/icon-twitter.svg">
+          <div class="tw-viewsnumbers">52k</div>
+          <img src="./images/icon-up.svg" class="up-overview">
+          <p class="percentage-up">1375%</p>
+        </div>
+
+        <div id="tw-likes" class="card" onclick="display()">
+          <p class="fb-text-likes" id="tw-text-likes">Likes</p><br>
+          <img class="fb-icon-views" src="./images/icon-twitter.svg">
+          <div class="tw-likesnumbers">507</div>
+          <img src="./images/icon-up.svg" class="up-overview">
+          <p class="percentage-up">553%</p>
+        </div>
+
+        <div id="yt-likes" class="card" onclick="display()">
+          <p class="fb-text-likes" id="yt-text-likes">Likes</p><br>
+          <img class="fb-icon-views" src="./images/icon-youtube.svg">
+          <div class="yt-likesnumbers">507</div>
+          <img src="./images/icon-down.svg" class="down">
+          <p class="percentage-up">19%</p>
+        </div>
+
+
+        <div id="yt-views" class="card" onclick="display()">
+          <p class="fb-text-likes" id="yt-text-views">Total Views</p><br>
+          <img class="fb-icon-views" src="./images/icon-youtube.svg">
+          <div class="yt-viewsnumbers">52k</div>
+          <img src="./images/icon-down.svg" class="down">
+          <p class="percentage-down">12%</p>
+        </div>
+
+
+
+        
+        </div>
+
+
+
+        </div>
+
+
+
+<br>  
+
+  
+</body>
+</html>
