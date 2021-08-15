@@ -1,0 +1,191 @@
+body
+{
+    background-image: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    height: 570px;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    margin-top:170px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    min-height: 500px;
+    width: 900px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.background
+{
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    margin-left: -240px;
+    margin-top: -40px;
+}
+.background-mobile
+{
+    display: none;
+}
+.img-container
+{
+    margin-left: -70px;
+    margin-top: 50px;
+    width: 418px;
+    height: 340px; 
+}
+
+.img1
+{
+    width: 100%;
+}
+
+.img2
+{
+    position: absolute;
+    margin-top: 110px;
+    margin-left: -480px;
+}
+
+.img-mobile
+{
+    display: none;
+}
+
+.content
+{
+    position: absolute;
+    margin-left: 420px;
+    margin-top:40px;
+    color: hsl(238, 29%, 16%);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif   
+}
+
+.arrow
+{
+    float:right;
+}
+
+.change
+{
+    transform: rotate(180deg);
+    transform: transform 2s;
+}
+.heading
+{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ques
+{
+    color: hsl(237, 12%, 33%);
+    font-weight: bold;
+}
+
+.ques:hover
+{
+    color: tomato;
+}
+
+.ans
+{
+    width: 420px;
+    color: hsl(2400, 6%, 50%);
+    margin-top: 15px;
+    font-weight: lighter;
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.ans-change
+{
+    width: 420px;
+    color: hsl(2400, 6%, 50%);
+    margin-top: 15px;
+    opacity: 1;
+    height: auto;
+}
+
+hr
+{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    width: 420px;
+    background-color: hsl(240, 5%, 91%);
+    border-width: 0;
+    height: 2px;
+}
+
+@media only screen and (min-width:300px) and (max-width:480px)
+{
+   ::-webkit-scrollbar {
+    display: none;
+    }
+    body 
+    {
+        height: 700px;
+    }
+    .container
+    {
+        flex-direction: column;
+        width: 250px;
+        height: 450px;
+        overflow:visible;
+    }
+
+    .img-container
+    {
+        display: none;
+    }
+
+    .img-mobile
+    {
+        position: relative;
+        margin-top: -90px;
+        margin-left:8px;
+        margin-right: auto;
+        display: block;
+        width: 220px;
+    }
+    .background
+    {
+        display: none;
+    }
+    .background-mobile
+    {
+        display: block;
+        position: absolute;
+        margin-left: 20px;
+        margin-top: -25px;
+    }
+    .content
+    {
+        margin-left: 40px;
+        margin-top: 70px;
+        font-size: 10px;
+    }
+    .heading
+    {
+        margin-left: 75px;
+    }
+    hr 
+    {
+        width: 200px;
+        margin-left: -5px;
+    }
+    .arrow
+    {
+        margin-left:-100px;
+        float: right;
+    }
+    .ans{
+        width: 200px;
+    }
+}
+
